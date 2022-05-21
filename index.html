@@ -48,7 +48,7 @@
               firebase.analytics();
               var temp = firebase.database().ref('realtime').child('nhietdo');
                 temp.on('value',snap =>{
-                console.log("Time : "+snap.val());
+                console.log(snap.val());
                 document.getElementById("temp").innerHTML = snap.val();
 });
             </script>

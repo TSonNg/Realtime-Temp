@@ -18,7 +18,7 @@
             </div>
             <div class="content">
                 <h1>Temperature</h1>
-                <p id='timeSpeed'>°C</p>
+                <p id='temp'></p>
             
 
             </div>
@@ -46,8 +46,8 @@
               // Initialize Firebase
               firebase.initializeApp(firebaseConfig);
               firebase.analytics();
-              var timeSpeed = firebase.database().ref('realtime').child('nhietdo');
-                timeSpeed.on('value',snap =>{
+              var temp = firebase.database().ref('realtime').child('nhietdo');
+                temp.on('value',snap =>{
                 console.log("Time : "+snap.val());
                 document.getElementById("timeSpeed").innerHTML = snap.val();
 });
